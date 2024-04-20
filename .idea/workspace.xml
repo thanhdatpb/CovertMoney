@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2f6b0c0-ce53-4600-952b-30351b714aed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/covertmoney/HttpServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/covertmoney/Json.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/covertmoney/Gson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/covertmoney/ServletException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/covertmoney/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/covertmoney/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/covertmoney/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/covertmoney/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/covertmoney/HttpServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/covertmoney/HttpServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/covertmoney/Json.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/covertmoney/Json.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/covertmoney/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/covertmoney/Convert.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +48,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -79,11 +82,24 @@
       <workItem from="1696838519749" duration="1271000" />
       <workItem from="1696866414291" duration="416000" />
       <workItem from="1713596353820" duration="1626000" />
-      <workItem from="1713597991916" duration="328000" />
+      <workItem from="1713597991916" duration="1213000" />
+      <workItem from="1713599214932" duration="140000" />
+      <workItem from="1713599364001" duration="1446000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
