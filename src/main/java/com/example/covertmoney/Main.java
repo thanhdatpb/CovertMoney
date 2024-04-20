@@ -1,25 +1,19 @@
-package com.example.covertmoney.*;
+package com.example.covertmoney;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import java.io.InputStream;
-import java.net.*;
-import com.google.gson.*;
+import com.google.code.gson;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.util.StringTokenizer;
 
-/**
- *
- * @author pakallis
- */
 class Recv
 {
     private String lhs;
     private String rhs;
     private String error;
     private String icc;
-    public Recv(
+    public Recv()
     {
     }
     public String getLhs()
@@ -31,33 +25,21 @@ class Recv
         return rhs;
     }
 }
-public class Convert extends HttpServlet {
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+public class Convert<HttpServletRequest, HttpServletResponse, HttpSession, Gson> extends HttpServlet {
     protected void processRequest(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
+            throws IOException, InterruptedException {
         String query = "";
         String amount = "";
         String curTo = "";
-        String curFrom = "";
-        String submit = "";
-        String res = "";
-        HttpSession session;
-        resp.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = resp.getWriter();
+        resp.toString();
+        resp.wait();
         /*Read request parameters*/
-        amount = req.getParameter("amount");
-        curTo = req.getParameter("to");
-        curFrom = req.getParameter("from");
-        /*Open a connection to google and read the result*/
+        amount = String.valueOf(req.getClass());
+        curTo = String.valueOf(req.getClass());
+        String curFrom = String.valueOf(req.getClass());
 
         try {
-            query = "http://www.google.com/ig/calculator?hl=en&q=" + amount + curFrom + "=?" + curTo;
+            query = "https://www.google.com/ig/calculator?hl=en&q=" + amount + curFrom + "=?" + curTo;
             URL url = new URL(query);
             InputStreamReader stream = new InputStreamReader(url.openStream());
             BufferedReader in = new BufferedReader(stream);
@@ -66,9 +48,7 @@ public class Convert extends HttpServlet {
             while ((temp = in.readLine()) != null) {
                 str = str + temp;
             }
-
-            /*Parse the result which is in json format*/
-            Gson gson = new Gson();
+            Gson gson = (Gson) new Json();
             Recv st = gson.fromJson(str, Recv.class);
             String rhs = st.getRhs();
             rhs = rhs.replaceAll("�", "");
@@ -76,41 +56,25 @@ public class Convert extends HttpServlet {
             StringTokenizer strto = new StringTokenizer(rhs);
             String nextToken;
 
-            out.write(strto.nextToken());
+            System.out.write(strto.nextToken().getBytes());
             nextToken = strto.nextToken();
 
             if( nextToken.equals("million") || nextToken.equals("billion") || nextToken.equals("trillion"))
             {
-                out.println(" "+nextToken);
+                System.out.println(" "+nextToken);
             }
         } catch (NumberFormatException e) {
-            out.println("The given amount is not a valid number");
+            System.out.println("The given amount is not a valid number");
         }
     }
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+    protected void doGet(Object request, Object response) throws IOException, InterruptedException {
+        processRequest((HttpServletRequest) request, (HttpServletResponse) response);
     }
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+    protected void doPost(Object request, Object response)
+            throws IOException, InterruptedException {
+        processRequest((HttpServletRequest) request, (HttpServletResponse) response);
     }
     /**
      * Returns a short description of the servlet.
@@ -120,4 +84,17 @@ public class Convert extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    private <httpServletRequest, httpServletResponse, httpSession> Convert.ServletException createServletException() {
+        return (Convert.ServletException) new ServletException();
+    }
+
+    private static final class ServletException {
+        private ServletException() {
+        }
+    }
+
+    public static class ServletExceptionImpl {
+
+    }
 }
