@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.StringTokenizer;
 
+@SuppressWarnings("hiding")
 public class Convert<HttpServletRequest, HttpServletResponse, Gson> extends HttpServlet {
     protected void processRequest(HttpServletRequest req, HttpServletResponse resp)
             throws IOException, InterruptedException {
@@ -31,6 +32,7 @@ public class Convert<HttpServletRequest, HttpServletResponse, Gson> extends Http
             System.out.println("The given amount is not a valid number");
         }
     }
+    @SuppressWarnings("null")
     private StringTokenizer getStringTokenizer(String query) throws IOException, InterruptedException {
         URL url = new URL(query);
         InputStreamReader stream = new InputStreamReader(url.openStream());
@@ -47,10 +49,12 @@ public class Convert<HttpServletRequest, HttpServletResponse, Gson> extends Http
         rhs = rhs.replaceAll("�", "");
         return new StringTokenizer(rhs);
     }
+    @SuppressWarnings("unchecked")
     @Override
     protected void doGet(Object request, Object response) throws IOException, InterruptedException {
         processRequest((HttpServletRequest) request, (HttpServletResponse) response);
     }
+    @SuppressWarnings("unchecked")
     @Override
     protected void doPost(Object request, Object response)
             throws IOException, InterruptedException {
