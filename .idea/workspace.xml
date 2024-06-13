@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a2f6b0c0-ce53-4600-952b-30351b714aed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/covertmoney/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/covertmoney/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/covertmoney/HttpServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/covertmoney/HttpServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "D:/Workspace/Java/Projects/CovertMoney/src/main/java/com/example",
-    "last_opened_file_path": "D:/Workspace/Java/Projects/Udermy/ClassesChenge",
+    "last_opened_file_path": "D:/Workspace/Java/Projects/CovertMoney",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -95,6 +93,7 @@
       <workItem from="1713703889758" duration="283000" />
       <workItem from="1714901824312" duration="89000" />
       <workItem from="1714901920572" duration="162000" />
+      <workItem from="1718268774264" duration="711000" />
     </task>
     <servers />
   </component>
