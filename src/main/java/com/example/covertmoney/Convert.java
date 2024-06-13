@@ -2,6 +2,7 @@ package com.example.covertmoney;
 
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -34,6 +35,14 @@ public class Convert<HttpServletRequest, HttpServletResponse, Gson> extends Http
             System.out.println("The given amount is not a valid number");
         }
     }
+
+    @Contract("_ -> new")
+    @SuppressWarnings("null")
+    @NotNull
+    public StringTokenizer getStringTokenizer() throws IOException, InterruptedException {
+        return getStringTokenizer(null);
+    }
+
     @Contract("_ -> new")
     @SuppressWarnings("null")
     private @NotNull StringTokenizer getStringTokenizer(String query) throws IOException, InterruptedException {

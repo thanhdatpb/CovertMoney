@@ -20,18 +20,17 @@ public abstract class HttpServlet {
         doPost(null, null);
     }
 
-        /**
-         * @throws ServletException
-         * @throws IOException
-         * @throws Convert.ServletException
-         * @throws InterruptedException
-         */
+//        /**
+//         * @throws ServletException
+//         * @throws IOException
+//         * @throws Convert.ServletException
+//         * @throws InterruptedException
+//         */
         protected void doPost(Object request)
                 throws ServletException, IOException, Convert.ServletException, InterruptedException {
             doPost(request, null);
         }
 
-    protected abstract void doPost(Object request,
-                                   Object response)
+    protected abstract void doPost(Object request, Object response)
             throws ServletException, IOException, Convert.ServletException, InterruptedException;
 }
