@@ -2,7 +2,6 @@ package com.example.covertmoney;
 
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -17,6 +16,7 @@ public class Convert<HttpServletRequest, HttpServletResponse, Gson> extends Http
         String amount;
         String curTo;
         resp.wait();
+
         /*Read request parameters*/
         amount = String.valueOf(req.getClass());
         curTo = String.valueOf(req.getClass());
@@ -45,6 +45,7 @@ public class Convert<HttpServletRequest, HttpServletResponse, Gson> extends Http
 
     @Contract("_ -> new")
     @SuppressWarnings("null")
+
     private @NotNull StringTokenizer getStringTokenizer(String query) throws IOException, InterruptedException {
         URL url = new URL(query);
         InputStreamReader stream = new InputStreamReader(url.openStream());
