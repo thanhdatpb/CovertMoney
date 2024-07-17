@@ -46,6 +46,7 @@ public class Convert<HttpServletRequest, HttpServletResponse, Gson> extends Http
     @Contract("_ -> new")
     @SuppressWarnings("null")
 
+    //getToken
     private @NotNull StringTokenizer getStringTokenizer(String query) throws IOException, InterruptedException {
         URL url = new URL(query);
         InputStreamReader stream = new InputStreamReader(url.openStream());
